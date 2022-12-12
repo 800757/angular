@@ -11,6 +11,6 @@ import { Equipment } from '../models/equipment';
     constructor(private http: HttpClient) { }
   
     getData(){
-      return this.http.get<Equipment[]>(environment.apiUrl+this.eventsPath+'');
+      return this.http.get<Equipment[]>(`${environment.apiUrl}/${this.eventsPath}`);
     }
   }
