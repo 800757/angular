@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     );
   }
   
-  ngOnDestroy: void {
+  ngOnDestroy(): void {
     this.subscriptions.forEach(s => {
       s.unsubscribe();
     });
